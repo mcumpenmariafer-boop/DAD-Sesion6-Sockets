@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Chat con WebSocket</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="stylesheet" href="estilos/estilos.css">
+</head>
+<body>
+    <div class="app">
+        <header>
+            <div class="avatar" id="avatar">💬</div>
+            <div>
+                <h1 id="titulo">Chat con WebSocket</h1>
+                <div class="estado"><span class="punto" id="punto"></span><span id="estado">Conectando...</span></div>
+            </div>
+        </header>
+
+        <!-- Pantalla 1: escribir el nombre -->
+        <div id="login">
+            <div class="logo">💬</div>
+            <h2>Bienvenido al chat</h2>
+            <p>Escribe tu nombre para que los demás sepan quién eres</p>
+            <input type="text" id="nombreBox" placeholder="Tu nombre" maxlength="40">
+            <button onclick="entrar()">Entrar al chat</button>
+        </div>
+
+        <!-- Pantalla 2: el chat -->
+        <div id="messages" class="oculto"></div>
+        <div class="barra oculto" id="barra">
+            <input type="text" id="msgBox" placeholder="Escribe un mensaje..." autocomplete="off">
+            <button id="btnEnviar" onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+
+    <script src="js/chat.js"></script>
+</body>
+</html>
